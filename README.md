@@ -18,36 +18,6 @@
 
 # 第二步：解读 *.js文件
 [async.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/async.js)
->ajv
-
-前面说到，HAR是基于JSON的，所有这里我们引入ajv用来检测是否为合格的JSON.
-AJV是JSON模式验证器。
-
-我们所用到的方法：
-
-.getSchema(String key) -> Function<Object data>
-Retrieve compiled schema previously added with addSchema by the key passed to addSchema or by its full reference (id). The returned validating function has schema property with the reference to the original schema.
-
-
-检索先前addSchema通过传递给addSchema它的完整引用（id）的键所添加的编译模式。返回的验证函数具有schema对原始模式的引用的属性。
-
->async.js中下面的代码中暴露function的方法一样，举出两个例子说明问题：
-```
-exports.afterRequest = function (data, next) {
-  return validate('afterRequest', data, next)
-}
-/*
-afterRequest方法中传入形参：数据data和回调函数next
-返回是刚刚定义的验证的结果，所需要匹配的格式是afterReuest，数据是传入的data
-如果next是函数，如果验证结果为false，抛出错误，如果是true，返回next(null,valid)，可以通过next回调函数进一步对数据进行处理
-如果next不是函数，直接返回验证结果
-*/
-
-exports.beforeRequest = function (data, next) {
-  return validate('beforeRequest', data, next)
-}
-```
-
 
 ## error.js
 
