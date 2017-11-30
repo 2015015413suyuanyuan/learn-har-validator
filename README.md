@@ -13,26 +13,8 @@
 [async.md](https://github.com/2015015413suyuanyuan/har-validator/edit/master/docs/async.md) 
 
 
-# 2.Callback.rd
->callback.rd正文
->>callback API
-
-每一个的格式类似如下，只是方法的名字不同：
-```
-validate.afterRequest(data [, callback])
-
-data: Object (Required) a afterRequest" objects
-callback: Function callback function with signature of (err, valid)
-
-validate.afterRequest(data, (err, valid) => {
-  if (err) console.error(err.errors)
-
-  if (valid) console.log('✔️')
-})
-
-```
-
-传入数据的格式要对应上，每一个方法后面都有一个callback，用于错误处理。
+# 2.Callback.md
+[callback.md](https://github.com/2015015413suyuanyuan/har-validator/edit/master/docs/callbackc.md) 
 
 # 第二步：解读 *.js文件
 
