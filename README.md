@@ -17,36 +17,7 @@
 [callback.md](https://github.com/2015015413suyuanyuan/har-validator/blob/master/docs/callback.md) 
 
 # 第二步：解读 *.js文件
-
-# async.js
-```
-var Ajv = require('ajv')//引入ajv，json验证器
-var HARError = require('./error')//引入同一目录下error.js，错误处理
-var schemas = require('har-schema')//引入har-schema,JSON Schema for HTTP Archive (HAR),Compatible with any JSON Schema validation tool.
-
-var ajv
-
-function validate (name, data, next) {
-  data = data || {}
-
-  // validator config  验证器配置
-  ajv = ajv || new Ajv({
-    allErrors: true,
-    schemas: schemas//添加HAR模式验证,基于JSON格式（已经引入'har-schema'）
-  })
-
-  var validate = ajv.getSchema(name + '.json')//得到验证模式
-
-  var valid = validate(data)//验证结果
-
-  // callback? 是否是一个回调函数，是回调函数，如果验证结果为false，抛出错误，如果是true，返回next(null,valid)
-  if (typeof next === 'function') {
-    return next(!valid ? new HARError(validate.errors) : null, valid)
-  }
- //如果不是回调函数，直接返回验证结果
- return valid
-}
-```
+[async.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/async.js)
 >ajv
 
 前面说到，HAR是基于JSON的，所有这里我们引入ajv用来检测是否为合格的JSON.
