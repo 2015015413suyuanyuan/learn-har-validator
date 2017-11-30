@@ -1,9 +1,9 @@
 # 2017/11/23
 ## 准备工作
-1.什么是HAR-validattor?
+1.什么是HAR-validator?
 >>使用JSON模式的极速HTTP存档(HAR)验证程序。
 >>注意：v2.0.0此模块默认为基于Promise的API。对于具有向后兼容性v1.x的异步/回调API还提供
-
+>>HAR-validator https://www.npmjs.com/package/har-validator
 # 2017/11/24
 (HAR介绍) http://blog.csdn.net/euyy1029/article/details/52350736
 
@@ -11,34 +11,7 @@
 # 第一步，解读 README.md
 # 1.async.md
 [async.md](https://github.com/2015015413suyuanyuan/har-validator/edit/master/docs/async.md) 
->Async.md的正文：
->>async API
 
-```
-import * as validate from 'har-validator/lib/async'
-import { request, response } from 'har-validator/lib/async'
-```
-
->>在async.md文件中，有很多afterRequest(data)/beforeRequest(data)等等，例如下面的：
-### validate.beforeRequest(data)
-
-> Returns `true` or `false`.
-
-- **data**: `Object` *(Required)*
-  a `["afterRequest"]`(https://github.com/ahmadnassri/har-spec/blob/master/versions/1.2.md#cache) objects
-
-```js
-let isValid = validate.beforeRequest(data)
-```
-//通过传入数据给方法，validate自动会对数据格式进行验证，从而返回true/false来告诉我们数据格式的正确与否。
-
-### 那么它们是什么意思呢？
-
-他们是`HAR(HTTP Archive)`规范
-
-HAR（HTTP Archive），是一个用来储存HTTP请求/响应信息的通用文件格式，基于JSON。这个格式的出现可以使HTTP监测工具以一种通用的格式导出所收集的数据，这些数据可以被其他支持HAR的HTTP分析工具（包括Firebug，httpwatch，Fiddler等）所使用，来分析网站的性能瓶颈。目前HAR规范最新版本为HAR 1.2。HAR文件必须是UTF-8编码，有无BOM无所谓。
-
->>>更多的关于async的介绍： http://blog.csdn.net/marujunyy/article/details/8695205
 
 # 2.Callback.rd
 >callback.rd正文
