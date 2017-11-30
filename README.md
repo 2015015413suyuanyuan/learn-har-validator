@@ -1,9 +1,9 @@
 # 2017/11/23
 ## 准备工作
-1.什么是HAR-validator?
+1.什么是[HAR-validator](https://www.npmjs.com/package/har-validator)?
 >>使用JSON模式的极速HTTP存档(HAR)验证程序。
 >>注意：v2.0.0此模块默认为基于Promise的API。对于具有向后兼容性v1.x的异步/回调API还提供
->>HAR-validator https://www.npmjs.com/package/har-validator
+
 # 2017/11/24
 (HAR介绍) http://blog.csdn.net/euyy1029/article/details/52350736
 
