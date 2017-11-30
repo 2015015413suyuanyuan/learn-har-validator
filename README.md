@@ -20,7 +20,7 @@
 [async.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/async.js)
 
 ## error.js
-
+[error.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/error.js)
 错误处理
 
 官方API 介绍 ：http://nodejs.cn/api/errors.html
