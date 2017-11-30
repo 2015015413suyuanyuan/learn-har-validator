@@ -5,51 +5,12 @@
 >>注意：v2.0.0此模块默认为基于Promise的API。对于具有向后兼容性v1.x的异步/回调API还提供
 
 # 2017/11/24
-http://blog.csdn.net/euyy1029/article/details/52350736
+(HAR介绍) http://blog.csdn.net/euyy1029/article/details/52350736
 
 ### 2017/11/27
 # 第一步，解读 README.md
 # 1.async.md
-
->首先对于Async 有一个认识：
->>Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript. Although >>originally designed for use with Node.js and installable via npm install --save async, it can also be used directly in the browser.
-
-(Async是一个实用程序模块，它为异步JavaScript提供了直接，强大的功能。虽然最初设计用于Node.js并npm install --save async可以通过安装，但也可以直接在浏览器中使用。)
-
-// for use with Node-style callbacks...
-//  用于Node风格的回调
-```
-var obj = {dev: "/dev.json", test: "/test.json", prod: "/prod.json"};
-var configs = {};
- 
-async.forEachOf(obj, (value, key, callback) => {
-    fs.readFile(__dirname + value, "utf8", (err, data) => {
-        if (err) return callback(err);
-        try {
-            configs[key] = JSON.parse(data);
-        } catch (e) {
-            return callback(e);
-        }
-        callback();
-    });
-}, err => {
-    if (err) console.error(err.message);
-    // configs is now a map of JSON data
-    doSomethingWith(configs);
-});
-
-
-// ...or ES2017 async functions
-//  ...或ES2017异步功能
-async.mapLimit(urls, 5, async function(url) {
-    const response = await fetch(url)
-    return response.body
-}, (err, results) => {
-    if (err) throw err
-    // results is now an array of the response bodies
-    console.log(results)
-})
-```
+[async.md](https://github.com/2015015413suyuanyuan/har-validator/edit/master/docs/async.md) 
 >Async.md的正文：
 >>async API
 
