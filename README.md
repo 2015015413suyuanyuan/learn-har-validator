@@ -14,7 +14,7 @@
 
 
 # 2.Callback.md
-[callback.md](https://github.com/2015015413suyuanyuan/har-validator/edit/master/docs/callbackc.md) 
+[callback.md](https://github.com/2015015413suyuanyuan/har-validator/blob/master/docs/callback.md) 
 
 # 第二步：解读 *.js文件
 
