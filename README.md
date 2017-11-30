@@ -10,7 +10,7 @@
 ### 2017/11/27
 # 第一步，解读 README.md
 # 1.async.md
-[async.md](https://github.com/2015015413suyuanyuan/har-validator/edit/master/docs/async.md) 
+[async.md](https://github.com/2015015413suyuanyuan/har-validator/blob/master/docs/async.md) 
 
 
 # 2.Callback.md
