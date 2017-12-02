@@ -118,10 +118,10 @@ true
 drwxrwxr-x. 4 wangding wangding  80 12月  2 10:18 har-validator
 
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request/node_modules(master*) ? cd har-validator                          wangding@OFFICE
+~/har-validator/test/fixtures/request/node_modules(master*) ? cd har-validator                         
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request/node_modules/har-validator(master*) ? ll                          wangding@OFFICE
-总用量 20K
+~/har-validator/test/fixtures/request/node_modules/har-validator(master*) ? ll                   
+
 drwxrwxr-x. 2 wangding wangding   27 12月  2 10:18 bin
 drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
 -rw-rw-r--. 1 wangding wangding  755 6月  22 2015 LICENSE
@@ -225,7 +225,7 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
   "version": "1.8.0"//版本号现在是1.8.0版本
 }
 ```
-
+>在这个版本我们可以看到它的文件只有error错误处理的和入口的
 ```
 ~/har-validator/test/fixtures/request/node_modules/har-validator/lib(master*) » ll                     
 总用量 12K
@@ -234,7 +234,8 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
 drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 
 ```
-
+>但是从我们现在5.0.0版本中我们可以看到它向后支持async的js,
+>这是就是版本的更替，同时也有新版本的promise.js，新版本的默认入口函数。
 ```
 ~/har-validator(master*) » cd lib                                                                     
 ------------------------------------------------------------
@@ -246,6 +247,4 @@ drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 ------------------------------------------------------------
 
 ```
->在这个版本我们可以看到它的文件只有error错误处理的和入口的，但是从我们现在5.0.0版本中我们可以看到它向后支持async的js,
->这是就是版本的更替，同时也有新版本的promise.js，新版本的默认入口函数。
 
