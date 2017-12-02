@@ -18,7 +18,7 @@
 [callback.md](https://github.com/2015015413suyuanyuan/har-validator/blob/master/docs/callback.md) 
 
 # 第二步：解读 *.js文件  
-## callback.js  
+## async.js  
 [async.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/async.js)
 
 
