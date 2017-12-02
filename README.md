@@ -27,18 +27,29 @@
 
 # 第三步 运行
 
-1.安装har-validator 
+## 1.安装har-validator 
 
 >npm init  
 >npm install har-validator -S 
 
-2.写一段小程序运行
+## 2.写一段小程序运行
+
+### 图一： 
 
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/SfpLPr7oX5b9*ZYigGs8IMcfdMlwuiaFUCLCngN1DAs!/b/dPIAAAAAAAAA&bo=YAKIAGACiAARADc!&rf=viewer_4)
 
+### 图二：
+
 ![h](http://a1.qpic.cn/psb?/V13ms87p1D0LH1/hvbjTaxmHzmIqkkWNuROtFsSfPHagcaapOF9AMq0asM!/b/dPMAAAAAAAAA&bo=gwIBAoMCAQIRADc!&rf=viewer_4)
 
+### 图三：
+
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/nVbvGWp7svDQozc5aeBwTQxv8Mt0aNMQfpmPlch1Dn4!/b/dPIAAAAAAAAA&bo=zgJsAc4CbAERADc!&rf=viewer_4)
+
+### 图四：
+
+![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/liiunLrGQUriwnBgsNQuF*BvzoGtuWw4DqiXKxKUnPc!/b/dPIAAAAAAAAA&bo=owKUAaMClAERADc!&rf=viewer_4)
+
 ## 在运行的过程中出现了一个问题：  
 程序的执行结果和我预期的结果不一样。请教老师以后我发现问题出现在这里：
 >Note: as of v2.0.0 this module defaults to Promise based API. For backward compatibility with v1.x an async/callback API is also provided
