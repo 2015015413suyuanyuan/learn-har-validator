@@ -70,7 +70,7 @@
 - 2.rm- rf node_modules  
 package.json  修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的）  
 
-```
+        
 ~/har-validator/test/fixtures/request(master*) » rm -rf node_modules                                    wangding@OFFICE
 ------------------------------------------------------------
 ~/har-validator/test/fixtures/request(master*) » node yun.js                                            wangding@OFFICE
@@ -78,7 +78,7 @@ module.js:529
     throw err;
     ^
 
-** Error: Cannot find module 'ajv' **
+ Error: Cannot find module 'ajv' 
 at Function.Module._resolveFilename (module.js:527:15)
     at Function.Module._load (module.js:476:23)
     at Module.require (module.js:568:17)
@@ -225,8 +225,7 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
   },
   "version": "1.8.0"
 }
-
-```
+        
 
 
 经过这样的修改以后我们会发现，运行的结果就是想要的true或者false，而不是每次运行不管正确与否都是promise对象
