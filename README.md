@@ -21,6 +21,67 @@
 ## callback.js  
 [async.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/async.js)
 
+
+
+
+```
+var Ajv = require('ajv')//引入ajv模块
+var HARError = require('./error')//引入错误处理模块接口
+var schemas = require('har-schema')//引用于HTTP存档的JSON模式（HAR),得到刚刚看到的HAR中所有的键名
+
+var ajv
+
+//具体实现功能的函数，传入需要验证的模式名称，验证数据，回调函数
+function validate (name, data, next) {
+  data = data || {}
+ 
+  //验证器的配置 
+  // validator config
+  ajv = ajv || new Ajv({
+    allErrors: true,
+    schemas: schemas//取到har-schema模块中全部用于匹配的模式，赋值给schemas，这样它就有了匹配的标准
+  })
+ 
+  //将ajv生成的验证函数赋给名为validate的变量
+  var validate = ajv.getSchema(name + '.json')
+  
+  //验证函数返回的结果值：true or false
+  var valid = validate(data)
+
+  // callback?
+  //验证是否传入回调函数，如果传入结果如下
+  if (typeof next === 'function') {
+  
+    //callback(结果未假时，产生一个错误对象给next;结果为真时，错误对象为null;第二个参数为传入的验证结果)
+    return next(!valid ? new HARError(validate.errors) : null, valid)
+  }
+  //没有传入回调函数，直接返回验证结果,true,false
+  return valid
+}
+
+
+exports.afterRequest = function (data, next) {
+  return validate('afterRequest', data, next)
+}
+
+exports.beforeRequest = function (data, next) {
+  return validate('beforeRequest', data, next)
+}
+
+......
+
+```
+>实际上，第一次看这个我也发现了他有个问题
+>暴露出来的函数实际上除了名称没有什么不一样
+>实现功能的是上面的validate函数，为什么要暴露那么多函数？
+>如果我们使用validate函数，每次都要输入匹配函数的名称，这样容易出错
+>但是我们把不同的名称封装成不同的函数，用户在使用模块的时候，会出现自动补全
+>这样就不会出现因为书写失误而造成的错误了
+>我们在事件的最后一节学的事件名称的管理，利用的也是这样的方法
+
+![h](http://a1.qpic.cn/psb?/V12SqnDn2lA815/WyXkdlDFuM6dohGQLCntVQrsbZZfLWaWe.6RqR2NKio!/b/dPMAAAAAAAAA&bo=3gLZAd4C2QERADc!&rf=viewer_4)
+
+
 ## error.js
 
 [error.js](https://github.com/2015015413suyuanyuan/har-validator/blob/master/lib/error.js)
