@@ -36,6 +36,8 @@
 
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/SfpLPr7oX5b9*ZYigGs8IMcfdMlwuiaFUCLCngN1DAs!/b/dPIAAAAAAAAA&bo=YAKIAGACiAARADc!&rf=viewer_4)
 
+![h](http://a1.qpic.cn/psb?/V13ms87p1D0LH1/hvbjTaxmHzmIqkkWNuROtFsSfPHagcaapOF9AMq0asM!/b/dPMAAAAAAAAA&bo=gwIBAoMCAQIRADc!&rf=viewer_4)
+
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/nVbvGWp7svDQozc5aeBwTQxv8Mt0aNMQfpmPlch1Dn4!/b/dPIAAAAAAAAA&bo=zgJsAc4CbAERADc!&rf=viewer_4)
 ## 在运行的过程中出现了一个问题：  
 程序的执行结果和我预期的结果不一样。请教老师以后我发现问题出现在这里：
