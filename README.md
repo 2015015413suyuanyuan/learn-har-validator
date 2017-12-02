@@ -90,6 +90,9 @@ at Function.Module._resolveFilename (module.js:527:15)
     at tryModuleLoad (module.js:508:12)
     at Function.Module._load (module.js:500:3)
 ------------------------------------------------------------
+```
+
+```
 ~/har-validator/test/fixtures/request(master*) » vi package.json      //修改到1.0.0版本后，运行npm install 这样就会下载1.0.0版本
 ------------------------------------------------------------
 ~/har-validator/test/fixtures/request(master*) » npm install                                            wangding@OFFICE
@@ -98,6 +101,9 @@ npm WARN request@1.0.0 No repository field.
 
 added 16 packages in 24.484s
 ------------------------------------------------------------
+```
+
+```
 ~/har-validator/test/fixtures/request(master*) » node yun.js     //再次运行，就不再是返回值就不是promise对象
 true
 
@@ -218,6 +224,5 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
 drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 
 ```
->在这个版本我们可以看到它的文件只有error错误处理的和入口的，但是从我们现在5.0.0版本中我们可以看到它向后支持callback和async的js,这是就是版本的更替，同时也有新版本的维护。
-
+>在这个版本我们可以看到它的文件只有error错误处理的和入口的，但是从我们现在5.0.0版本中我们可以看到它向后支持async的js,这是就是版本的更替，同时也有新版本的promise.js，默认的入口函数。
 
