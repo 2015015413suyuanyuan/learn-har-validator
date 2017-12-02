@@ -48,7 +48,7 @@
 
 ### 如何来解决这个问题？老师给我提供的两种方案：  
 
-#### 1.修改 node_moudules 里面  package.json  入口改下(改变它的入口参数，变为我们想要的调用方式)
+### 1.修改 node_moudules 里面  package.json  入口改下(改变它的入口参数，变为我们想要的调用方式)
 
 ### 图一： 
 
@@ -67,7 +67,7 @@
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/liiunLrGQUriwnBgsNQuF*BvzoGtuWw4DqiXKxKUnPc!/b/dPIAAAAAAAAA&bo=owKUAaMClAERADc!&rf=viewer_4)
 
 
-#### 2.rm- rf node_modules  
+### 2.rm- rf node_modules  
 package.json  修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的）  
 
 ```   
