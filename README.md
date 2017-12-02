@@ -92,8 +92,10 @@ at Function.Module._resolveFilename (module.js:527:15)
 ------------------------------------------------------------
 ```
 
+
+**//修改到1.0.0版本后，运行npm install 这样就会下载1.0.0版本**
 ```
-~/har-validator/test/fixtures/request(master*) » vi package.json      //修改到1.0.0版本后，运行npm install 这样就会下载1.0.0版本
+~/har-validator/test/fixtures/request(master*) » vi package.json      
 ------------------------------------------------------------
 ~/har-validator/test/fixtures/request(master*) » npm install                                            wangding@OFFICE
 npm WARN request@1.0.0 No description
@@ -103,11 +105,14 @@ added 16 packages in 24.484s
 ------------------------------------------------------------
 ```
 
+**//再次运行，就不再是返回值就不是promise对象**
 ```
-~/har-validator/test/fixtures/request(master*) » node yun.js     //再次运行，就不再是返回值就不是promise对象
+~/har-validator/test/fixtures/request(master*) » node yun.js    
 true
+```
 
-//查看一下新下载的node_modules中模块的版本号
+**//查看一下新下载的node_modules中模块的版本号**
+```
 ~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                        wangding@OFFICE
 总用量 0
 
