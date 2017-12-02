@@ -71,6 +71,41 @@
 package.json  修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的）  
 
 ```
+~/har-validator/test/fixtures/request(master*) » rm -rf node_modules                                    wangding@OFFICE
+------------------------------------------------------------
+~/har-validator/test/fixtures/request(master*) » node yun.js                                            wangding@OFFICE
+module.js:529
+    throw err;
+    ^
+
+** Error: Cannot find module 'ajv' **
+at Function.Module._resolveFilename (module.js:527:15)
+    at Function.Module._load (module.js:476:23)
+    at Module.require (module.js:568:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/wangding/har-validator/lib/promise.js:1:73)
+    at Module._compile (module.js:624:30)
+    at Object.Module._extensions..js (module.js:635:10)
+    at Module.load (module.js:545:32)
+    at tryModuleLoad (module.js:508:12)
+    at Function.Module._load (module.js:500:3)
+------------------------------------------------------------
+~/har-validator/test/fixtures/request(master*) » vi package                                             wangding@OFFICE
+------------------------------------------------------------
+~/har-validator/test/fixtures/request(master*) » rm package                                             wangding@OFFICE
+------------------------------------------------------------
+~/har-validator/test/fixtures/request(master*) » vi package.json                                        wangding@OFFICE
+------------------------------------------------------------
+~/har-validator/test/fixtures/request(master*) » npm install                                            wangding@OFFICE
+npm WARN request@1.0.0 No description
+npm WARN request@1.0.0 No repository field.
+
+added 16 packages in 24.484s
+------------------------------------------------------------
+~/har-validator/test/fixtures/request(master*) » node yun.js                                            wangding@OFFICE
+true
+
+
 ~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                        wangding@OFFICE
 总用量 0
 drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 ansi-regex
