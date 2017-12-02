@@ -29,9 +29,12 @@
 
 
 # 第三步 运行
+
 1.安装har-validator 
+
 >npm init  
->npm install har-validator -S  
+>npm install har-validator -S 
+
 2.写一段小程序运行
 
 ## 在运行的过程中出现了一个问题：  
@@ -43,7 +46,12 @@
 >Promise API (default)  
 
 虽然它支持3种形式的调用，但是我们安装的har-validator是5.0版本，在2.0.0以后默认支持的就是Promise，虽然它向后支持callback  async形式的调用，但是我们安装的版本较高，所以她默认支持的就是promise，所以每次运行成功或者失败的结果都是返回一个promise对象。  
+
 如何来解决这个问题？老师给我提供的两种方案：  
 
+1.修改 node_moudules 里面  package.json  入口改下
+
+2.rm- rf node_modules  
+package.json  修改版本号 回到1.0
 
 
