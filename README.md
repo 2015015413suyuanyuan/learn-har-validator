@@ -73,7 +73,7 @@
 ```   
 ~/har-validator/test/fixtures/request(master*) » rm -rf node_modules     
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request(master*) » node yun.js                                            wangding@OFFICE
+~/har-validator/test/fixtures/request(master*) » node yun.js                                            
 module.js:529
     throw err;
     ^
@@ -97,7 +97,7 @@ at Function.Module._resolveFilename (module.js:527:15)
 ```
 ~/har-validator/test/fixtures/request(master*) » vi package.json      
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request(master*) » npm install                                            wangding@OFFICE
+~/har-validator/test/fixtures/request(master*) » npm install                                           
 npm WARN request@1.0.0 No description
 npm WARN request@1.0.0 No repository field.
 
@@ -113,8 +113,7 @@ true
 
 **//查看一下新下载的node_modules中模块的版本号**
 ```
-~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                        wangding@OFFICE
-总用量 0
+~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                       
 
 drwxrwxr-x. 4 wangding wangding  80 12月  2 10:18 har-validator
 
@@ -129,7 +128,7 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
 -rw-rw-r--. 1 wangding wangding 2.2K 12月  2 10:18 package.json
 -rw-rw-r--. 1 wangding wangding 8.8K 6月  22 2015 README.md
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request/node_modules/har-validator(master*) ? cat package.json            wangding@OFFICE
+~/har-validator/test/fixtures/request/node_modules/har-validator(master*) ? cat package.json          
 {
   "_from": "har-validator@^1.0.0",
   "_id": "har-validator@1.8.0",
@@ -228,7 +227,7 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
 ```
 
 ```
-~/har-validator/test/fixtures/request/node_modules/har-validator/lib(master*) » ll                      wangding@OFFICE
+~/har-validator/test/fixtures/request/node_modules/har-validator/lib(master*) » ll                     
 总用量 12K
 -rw-rw-r--. 1 wangding wangding  186 4月   2 2015 error.js
 -rw-rw-r--. 1 wangding wangding  776 6月  11 2015 index.js
@@ -237,9 +236,9 @@ drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 ```
 
 ```
-~/har-validator(master*) » cd lib                                                                       wangding@OFFICE
+~/har-validator(master*) » cd lib                                                                     
 ------------------------------------------------------------
-~/har-validator/lib(master*) » ll                                                                       wangding@OFFICE
+~/har-validator/lib(master*) » ll                                                                       
 总用量 12K
 -rw-rw-r--. 1 wangding wangding 2.0K 11月 23 15:27 async.js
 -rw-rw-r--. 1 wangding wangding  373 11月 23 15:27 error.js
@@ -247,5 +246,6 @@ drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 ------------------------------------------------------------
 
 ```
->在这个版本我们可以看到它的文件只有error错误处理的和入口的，但是从我们现在5.0.0版本中我们可以看到它向后支持async的js,这是就是版本的更替，同时也有新版本的promise.js，新版本的默认入口函数。
+>在这个版本我们可以看到它的文件只有error错误处理的和入口的，但是从我们现在5.0.0版本中我们可以看到它向后支持async的js,
+>这是就是版本的更替，同时也有新版本的promise.js，新版本的默认入口函数。
 
