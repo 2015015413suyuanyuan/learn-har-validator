@@ -193,8 +193,8 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
     "validator"
   ],
   "license": "ISC",
-  "main": "lib/index",
-  "name": "har-validator",
+  "main": "lib/index",//旧版本入口是index,而不再是promise
+  "name": "har-validator",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ahmadnassri/har-validator.git"
@@ -206,7 +206,7 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
     "pretest": "standard && echint",
     "test": "mocha"
   },
-  "version": "1.8.0"
+  "version": "1.8.0"//版本号现在是1.8.0版本
 }
 ```
 
