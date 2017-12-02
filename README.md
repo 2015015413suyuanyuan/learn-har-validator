@@ -4,9 +4,11 @@
 >>使用JSON模式的极速HTTP存档(HAR)验证程序。
 >>注意：v2.0.0此模块默认为基于Promise的API。对于具有向后兼容性v1.x的异步/回调API还提供
 
-(HAR介绍) http://blog.csdn.net/euyy1029/article/details/52350736
+[HAR介绍](http://blog.csdn.net/euyy1029/article/details/52350736)
 
-### 2017/11/27
+[HAR脑图](http://a1.qpic.cn/psb?/V12SqnDn0LRaAn/dzFbCfHa*ZEEDktamTo7Eu.eLVDV9QcM8EkHQsNOMtQ!/b/dPMAAAAAAAAA&bo=igc4BNEI7wQDAKY!&rf=viewer_4)
+
+
 # 第一步，解读 README.md
 ## 1.async.md
 [async.md](https://github.com/2015015413suyuanyuan/har-validator/blob/master/docs/async.md) 
