@@ -70,8 +70,8 @@
 - 2.rm- rf node_modules  
 package.json  修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的）  
 
-        
-~/har-validator/test/fixtures/request(master*) » rm -rf node_modules                                    wangding@OFFICE
+```   
+~/har-validator/test/fixtures/request(master*) » rm -rf node_modules     //删除以后缺少了它的依赖模块，运行出错 
 ------------------------------------------------------------
 ~/har-validator/test/fixtures/request(master*) » node yun.js                                            wangding@OFFICE
 module.js:529
@@ -90,11 +90,7 @@ at Function.Module._resolveFilename (module.js:527:15)
     at tryModuleLoad (module.js:508:12)
     at Function.Module._load (module.js:500:3)
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request(master*) » vi package                                             wangding@OFFICE
-------------------------------------------------------------
-~/har-validator/test/fixtures/request(master*) » rm package                                             wangding@OFFICE
-------------------------------------------------------------
-~/har-validator/test/fixtures/request(master*) » vi package.json                                        wangding@OFFICE
+~/har-validator/test/fixtures/request(master*) » vi package.json      //修改到1.0.0版本后，运行npm install 这样就会下载1.0.0版本
 ------------------------------------------------------------
 ~/har-validator/test/fixtures/request(master*) » npm install                                            wangding@OFFICE
 npm WARN request@1.0.0 No description
@@ -102,28 +98,15 @@ npm WARN request@1.0.0 No repository field.
 
 added 16 packages in 24.484s
 ------------------------------------------------------------
-~/har-validator/test/fixtures/request(master*) » node yun.js                                            wangding@OFFICE
+~/har-validator/test/fixtures/request(master*) » node yun.js     //再次运行，就不再是返回值就不是promise对象
 true
 
-
-~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                        wangding@OFFICE
+//查看一下新下载的node_modules中模块的版本号
+~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                        wangding@OFFICE
 总用量 0
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 ansi-regex
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 ansi-styles
-drwxrwxr-x. 3 wangding wangding  88 12月  2 10:18 bluebird
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 chalk
-drwxrwxr-x. 3 wangding wangding 109 12月  2 10:18 commander
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 escape-string-regexp
-drwxrwxr-x. 2 wangding wangding 129 12月  2 10:18 generate-function
-drwxrwxr-x. 2 wangding wangding 126 12月  2 10:18 generate-object-property
+
 drwxrwxr-x. 4 wangding wangding  80 12月  2 10:18 har-validator
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 has-ansi
-drwxrwxr-x. 3 wangding wangding 177 12月  2 10:18 is-my-json-valid
-drwxrwxr-x. 2 wangding wangding  98 12月  2 10:18 is-property
-drwxrwxr-x. 2 wangding wangding  83 12月  2 10:18 jsonpointer
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 strip-ansi
-drwxrwxr-x. 2 wangding wangding  74 12月  2 10:18 supports-color
-drwxrwxr-x. 2 wangding wangding 162 12月  2 10:18 xtend
+
 ------------------------------------------------------------
 ~/har-validator/test/fixtures/request/node_modules(master*) ? cd har-validator                          wangding@OFFICE
 ------------------------------------------------------------
@@ -225,8 +208,7 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
   },
   "version": "1.8.0"
 }
-        
-
+```
 
 经过这样的修改以后我们会发现，运行的结果就是想要的true或者false，而不是每次运行不管正确与否都是promise对象
 
