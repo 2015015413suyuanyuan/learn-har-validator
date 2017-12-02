@@ -210,6 +210,14 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
 }
 ```
 
-经过这样的修改以后我们会发现，运行的结果就是想要的true或者false，而不是每次运行不管正确与否都是promise对象
+```
+~/har-validator/test/fixtures/request/node_modules/har-validator/lib(master*) » ll                      wangding@OFFICE
+总用量 12K
+-rw-rw-r--. 1 wangding wangding  186 4月   2 2015 error.js
+-rw-rw-r--. 1 wangding wangding  776 6月  11 2015 index.js
+drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
+
+```
+>在这个版本我们可以看到它的文件只有error错误处理的和入口的，但是从我们现在5.0.0版本中我们可以看到它向后支持callback和async的js,这是就是版本的更替，同时也有新版本的维护。
 
 
