@@ -67,8 +67,7 @@
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/liiunLrGQUriwnBgsNQuF*BvzoGtuWw4DqiXKxKUnPc!/b/dPIAAAAAAAAA&bo=owKUAaMClAERADc!&rf=viewer_4)
 
 
-### 2.rm- rf node_modules  
-package.json  修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的）  
+### 2.rm- rf node_modules，package.json修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的），重新下载旧版本的模块
 
 ```   
 ~/har-validator/test/fixtures/request(master*) » rm -rf node_modules     //删除以后缺少了它的依赖模块，运行出错 
