@@ -67,7 +67,7 @@
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/liiunLrGQUriwnBgsNQuF*BvzoGtuWw4DqiXKxKUnPc!/b/dPIAAAAAAAAA&bo=owKUAaMClAERADc!&rf=viewer_4)
 
 
-### 2.rm- rf node_modules，package.json修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持的可能就是async形式的），重新下载旧版本的模块
+### 2.rm- rf node_modules，package.json修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持index.js为入口模块），重新下载旧版本的模块
 
 **//删除以后缺少了它的依赖模块，运行出错**
 ```   
@@ -204,8 +204,12 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
     "validator"
   ],
   "license": "ISC",
+ ```
+ ```
   "main": "lib/index",//旧版本入口是index,而不再是promise
-  "name": "har-validator",
+ ```
+ ```
+ "name": "har-validator",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ahmadnassri/har-validator.git"
@@ -217,6 +221,8 @@ drwxrwxr-x. 3 wangding wangding   53 12月  2 10:18 lib
     "pretest": "standard && echint",
     "test": "mocha"
   },
+  ```
+  ```
   "version": "1.8.0"//版本号现在是1.8.0版本
 }
 ```
