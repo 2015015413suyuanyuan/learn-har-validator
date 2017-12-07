@@ -299,6 +299,7 @@ drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 ```
 >但是从我们现在5.0.0版本中我们可以看到它向后支持async的js,
 >这是就是版本的更替，同时也有新版本的promise.js，新版本的默认入口函数。
+
 ```
 ~/har-validator(master*) » cd lib                                                                     
 ------------------------------------------------------------
@@ -308,6 +309,5 @@ drwxrwxr-x. 2 wangding wangding 4.0K 12月  2 10:18 schemas
 -rw-rw-r--. 1 wangding wangding  373 11月 23 15:27 error.js
 -rw-rw-r--. 1 wangding wangding 1.8K 11月 23 15:27 promise.js
 ------------------------------------------------------------
-
 ```
 
