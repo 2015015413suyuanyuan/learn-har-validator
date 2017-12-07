@@ -27,37 +27,37 @@
 
 
 ```
-var Ajv = require('ajv')//引入ajv模块
-var HARError = require('./error')//引入错误处理模块接口
-var schemas = require('har-schema')//引用于HTTP存档的JSON模式（HAR),得到刚刚看到的HAR中所有的键名
+var Ajv = require('ajv')// 引入ajv模块
+var HARError = require('./error')// 引入错误处理模块接口
+var schemas = require('har-schema')// 引用于HTTP存档的JSON模式（HAR),得到刚刚看到的HAR中所有的键名
 
 var ajv
 
-//具体实现功能的函数，传入需要验证的模式名称，验证数据，回调函数
+// 具体实现功能的函数，传入需要验证的模式名称，验证数据，回调函数
 function validate (name, data, next) {
   data = data || {}
  
-  //验证器的配置 
+  // 验证器的配置 
   // validator config
   ajv = ajv || new Ajv({
     allErrors: true,
-    schemas: schemas//取到har-schema模块中全部用于匹配的模式，赋值给schemas，这样它就有了匹配的标准
+    schemas: schemas// 取到har-schema模块中全部用于匹配的模式，赋值给schemas，这样它就有了匹配的标准
   })
  
-  //将ajv生成的验证函数赋给名为validate的变量
+  // 将ajv生成的验证函数赋给名为validate的变量
   var validate = ajv.getSchema(name + '.json')
   
-  //验证函数返回的结果值：true or false
+  // 验证函数返回的结果值：true or false
   var valid = validate(data)
 
   // callback?
-  //验证是否传入回调函数，如果传入结果如下
+  // 验证是否传入回调函数，如果传入结果如下
   if (typeof next === 'function') {
   
-    //callback(结果未假时，产生一个错误对象给next;结果为真时，错误对象为null;第二个参数为传入的验证结果)
+    // callback(结果未假时，产生一个错误对象给next;结果为真时，错误对象为null;第二个参数为传入的验证结果)
     return next(!valid ? new HARError(validate.errors) : null, valid)
   }
-  //没有传入回调函数，直接返回验证结果,true,false
+  // 没有传入回调函数，直接返回验证结果,true,false
   return valid
 }
 
