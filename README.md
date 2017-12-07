@@ -132,7 +132,7 @@ exports.beforeRequest = function (data, next) {
 
 ### 2.rm- rf node_modules，package.json修改版本号 回到1.0（改变它的版本号，在旧的版本中默认支持index.js为入口模块），重新下载旧版本的模块
 
-**//删除以后缺少了它的依赖模块，运行出错**
+**删除以后缺少了它的依赖模块，运行出错**
 ```   
 ~/har-validator/test/fixtures/request(master*) » rm -rf node_modules     
 ------------------------------------------------------------
@@ -156,7 +156,7 @@ at Function.Module._resolveFilename (module.js:527:15)
 ```
 
 
-**//修改到1.0.0版本后，运行npm install 这样就会下载1.0.0版本**
+**修改到1.0.0版本后，运行npm install 这样就会下载1.0.0版本**
 ```
 ~/har-validator/test/fixtures/request(master*) » vi package.json      
 ------------------------------------------------------------
@@ -168,13 +168,13 @@ added 16 packages in 24.484s
 ------------------------------------------------------------
 ```
 
-**//再次运行，就不再是返回值就不是promise对象**
+**再次运行，就不再是返回值就不是promise对象**
 ```
 ~/har-validator/test/fixtures/request(master*) » node yun.js    
 true
 ```
 
-**//查看一下新下载的node_modules中模块的版本号**
+**查看一下新下载的node_modules中模块的版本号**
 ```
 ~/har-validator/test/fixtures/request/node_modules(master*) ? ll                                       
 
