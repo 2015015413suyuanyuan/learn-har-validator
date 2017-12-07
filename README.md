@@ -1,4 +1,3 @@
-# 2017/11/23
 ## 准备工作
 1.什么是[HAR-validator](https://www.npmjs.com/package/har-validator)?
 >>使用JSON模式的极速HTTP存档(HAR)验证程序。
@@ -113,19 +112,19 @@ exports.beforeRequest = function (data, next) {
 
 ### 1.修改 node_moudules 里面  package.json  入口改下(改变它的入口参数，变为我们想要的调用方式)
 
-### 图一： 
+#### 图一： 
 
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/SfpLPr7oX5b9*ZYigGs8IMcfdMlwuiaFUCLCngN1DAs!/b/dPIAAAAAAAAA&bo=YAKIAGACiAARADc!&rf=viewer_4)
 
-### 图二：
+#### 图二：
 
 ![h](http://a1.qpic.cn/psb?/V13ms87p1D0LH1/hvbjTaxmHzmIqkkWNuROtFsSfPHagcaapOF9AMq0asM!/b/dPMAAAAAAAAA&bo=gwIBAoMCAQIRADc!&rf=viewer_4)
 
-### 图三：
+#### 图三：
 
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/nVbvGWp7svDQozc5aeBwTQxv8Mt0aNMQfpmPlch1Dn4!/b/dPIAAAAAAAAA&bo=zgJsAc4CbAERADc!&rf=viewer_4)
 
-### 图四：
+#### 图四：
 
 ![h](http://a3.qpic.cn/psb?/V13ms87p1D0LH1/liiunLrGQUriwnBgsNQuF*BvzoGtuWw4DqiXKxKUnPc!/b/dPIAAAAAAAAA&bo=owKUAaMClAERADc!&rf=viewer_4)
 
