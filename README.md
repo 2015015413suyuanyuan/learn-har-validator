@@ -26,7 +26,7 @@
 
 
 ```
-var Ajv = require('ajv')// 引入ajv模块
+var Ajv = require('ajv')// 引入ajv模块  
 var HARError = require('./error')// 引入错误处理模块接口
 var schemas = require('har-schema')// 引用于HTTP存档的JSON模式（HAR),得到刚刚看到的HAR中所有的键名
 
@@ -35,15 +35,19 @@ var ajv
 // 具体实现功能的函数，传入需要验证的模式名称，验证数据，回调函数
 function validate (name, data, next) {
   data = data || {}
- 
-  // 验证器的配置 
+
   // validator config
   ajv = ajv || new Ajv({
-    allErrors: true,
-    schemas: schemas// 取到har-schema模块中全部用于匹配的模式，赋值给schemas，这样它就有了匹配的标准
-  })
+    allErrors: true, // 检查收集所有错误的所有规则。默认是在第一个错误之后返回
+    schemas: schemas
+    /*
+      an array or object of schemas that will be added to the instance. 
+      In case you pass the array the schemas must have IDs in them. When the object is passed the method addSchema(value, key) will be         called for each schema in this object.
+      .addSchema(Array<Object>|Object schema [, String key]) -> Ajv  //将模式添加到验证程序实例
+    */
+    })
  
-  // 将ajv生成的验证函数赋给名为validate的变量
+  // 返回的验证函数
   var validate = ajv.getSchema(name + '.json')
   
   // 验证函数返回的结果值：true or false
