@@ -5,7 +5,7 @@
 
 [HAR介绍](http://blog.csdn.net/euyy1029/article/details/52350736)
 
-[HAR脑图](http://a1.qpic.cn/psb?/V12SqnDn0LRaAn/dzFbCfHa*ZEEDktamTo7Eu.eLVDV9QcM8EkHQsNOMtQ!/b/dPMAAAAAAAAA&bo=igc4BNEI7wQDAKY!&rf=viewer_4)
+![HAR脑图](http://m.qpic.cn/psb?/V12SqnDn0LRaAn/a2Hvi.Kz*Bdrnnj04zBWcZtNluLRcEdw*Qyidt0uXQg!/b/dD8BAAAAAAAA&bo=8gc4BHQJBQUDCZg!&rf=viewer_4)
 
 
 # 第一步，解读 README.md
