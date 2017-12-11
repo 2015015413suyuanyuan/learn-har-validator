@@ -58,7 +58,7 @@ function validate (name, data, next) {
   // 验证是否传入回调函数，如果传入结果如下
   if (typeof next === 'function') {
   
-    // callback(结果未假时，产生一个错误对象给next;结果为真时，错误对象为null;第二个参数为传入的验证结果)
+    // next(结果为假时，产生一个错误对象给next;结果为真时，错误对象为null;第二个参数为传入的验证结果)
     return next(!valid ? new HARError(validate.errors) : null, valid)
   }
   // 没有传入回调函数，直接返回验证结果,true,false
@@ -104,7 +104,9 @@ exports.beforeRequest = function (data, next) {
 
 
 ## 在运行的过程中出现了一个问题：  
+
 程序的执行结果和我预期的结果不一样。请教老师以后我发现问题出现在这里：
+
 >Note: as of v2.0.0 this module defaults to Promise based API. For backward compatibility with v1.x an async/callback API is also provided
 
 >async API  
