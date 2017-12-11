@@ -28,7 +28,7 @@
 ```
 var Ajv = require('ajv')// 引入ajv模块  
 var HARError = require('./error')// 引入错误处理模块接口
-var schemas = require('har-schema')// 引用于HTTP存档的JSON模式（HAR),得到刚刚看到的HAR中所有的键名
+var schemas = require('har-schema')// 引用于HTTP存档的JSON模式（HAR),得到刚刚看到的HAR中所有的对象的格式
 
 var ajv
 
@@ -76,11 +76,10 @@ exports.beforeRequest = function (data, next) {
 
 ......
 
-```
->实际上，第一次看这个我也发现了他有个问题  
+``` 
 >暴露出来的函数实际上除了名称没有什么不一样  
 >实现功能的是上面的validate函数，为什么要暴露那么多函数？  
->如果我们使用validate函数，每次都要输入匹配函数的名称，这样容易出错  
+>如果我们使用validate函数，每次都要输入名称，这样容易出错  
 >但是我们把不同的名称封装成不同的函数，用户在使用模块的时候，会出现自动补全  
 >这样就不会出现因为书写失误而造成的错误了  
 >我们在事件的最后一节学的事件名称的管理，利用的也是这样的方法  
