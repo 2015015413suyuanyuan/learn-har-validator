@@ -42,7 +42,8 @@ function validate (name, data, next) {
     schemas: schemas
     /*
       an array or object of schemas that will be added to the instance. 
-      In case you pass the array the schemas must have IDs in them. When the object is passed the method addSchema(value, key) will be         called for each schema in this object.
+      In case you pass the array the schemas must have IDs in them. 
+      When the object is passed the method addSchema(value, key) will be called for each schema in this object.
       .addSchema(Array<Object>|Object schema [, String key]) -> Ajv  //将模式添加到验证程序实例
     */
     })
